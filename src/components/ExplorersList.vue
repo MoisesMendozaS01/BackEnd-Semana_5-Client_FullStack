@@ -20,7 +20,7 @@
         <div>
           <br><label><strong>Nombre:</strong></label> {{ currentExplorer.name}}
           <br><label><strong>Username:</strong></label> {{ currentExplorer.username}}
-          <br><label><strong>Mission:</strong></label> {{ currentExplorer.mission}}
+          <br><label><strong>Main Stack:</strong></label> {{ currentExplorer.mainStack}}
         </div>
         <router-link :to="'/explorer/' + currentExplorer.id" class="btn btn-info"> Editar</router-link>
       </div>

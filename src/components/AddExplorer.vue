@@ -25,14 +25,14 @@
         />
       </div>
       <div class="form-group">
-        <label for="title">Misión</label>
+        <label for="title">Main Stack</label>
         <input
           type="text"
           class="form-control"
-          id="mission"
+          id="mainStack"
           required
-          v-model="explorer.mission"
-          name="mission"
+          v-model="explorer.mainStack"
+          name="mainStack"
         />
       </div>
       <button @click="saveExplorer" class="btn btn-success">Agregar</button>
@@ -54,7 +54,7 @@ export default {
         id: null,
         name: "",
         username: "",
-        mission: ""
+        mainStack: ""
       },
       submitted: false
     };
@@ -64,7 +64,7 @@ export default {
       var data = {
         name: this.explorer.name,
         username: this.explorer.username,
-        mission: this.explorer.mission
+        mainStack: this.explorer.mainStack
       };
       ExplorerService.create(data)
         .then(response => {
